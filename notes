@@ -1,0 +1,36 @@
+MySQL db table creation code
+
+create table posts (
+	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    ship varchar(64) not null,
+    captain varchar(128) not null,
+    curtime time not null,
+    curdate date not null
+);
+
+    <!-- Grabs data from the ship row in my DB and echoes it onto my site -->
+<?php 
+    $sql = "SELECT * FROM general;";
+    $result = mysqli_query($conn, $sql);
+    $resultcheck = mysqli_num_rows($result);
+
+    if ($resultcheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row['ship'];
+        }
+    }
+?>
+
+
+Insert template
+<?php 
+    include_once 'dbcon.php';
+
+    $ship = $_POST['ship'];
+    $sqlDate=date("Y-m-d H:i:s",strtotime($date));
+
+    $sql = "INSERT INTO general (ship, captain, curtime, curdate) 
+        VALUES ('$ship', '$captain', '$time', '$sqlDate')";
+    mysqli_query($conn, $sql);
+
+header("Location: ../index.php?general=success");

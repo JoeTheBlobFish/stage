@@ -1,0 +1,31 @@
+NIET VERGETEN ASSIGN TE VERVANGEN MET DECLARE
+
+General test: 
+Insert: Ja
+Edit: Ja
+Update: Ja
+Delete: Ja
+
+At Sea Test:
+Insert: Ja
+Edit: Ja
+Update: Ja
+Delete: Ja
+
+Arriving Port Test:
+Insert: Ja
+Edit: Ja
+Update: Ja
+Delete: Ja
+
+Departing from Port Test:
+Insert: Ja
+Edit: Ja
+Update: Ja
+Delete: Ja
+
+Cargo Test:
+Insert: Ja
+Edit: Ja
+Update: Ja
+Delete: Ja
